@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import AppContext from './GlobalContext';
+import GlobalContext from './GlobalContext';
 import { useState } from 'react';
 
 export default function Provider({ children }) {
@@ -7,15 +7,15 @@ export default function Provider({ children }) {
   const [accessButton, setAccessButton] = useState(true); 
 
   const values = {
-    input, 
+    input,
     setInput,
     accessButton,
     setAccessButton,
   }
 
   return (
-    <AppContext.Provider value={ values }>
+    <GlobalContext.Provider value={ values }>
       { children }
-    </AppContext.Provider>
+    </GlobalContext.Provider>
   );
 }
