@@ -28,6 +28,10 @@ export default function SearchBar() {
     }
   }
 
+/*   useEffect(() => {
+    searchRepositoriesByUser();
+  }, [input]) */
+
   useEffect(() => {
     validateButton();
   }, [input, accessButton]);
@@ -45,7 +49,7 @@ export default function SearchBar() {
       <button
         type="button"
         disabled={ accessButton }
-        onClick={ () => searchRepositoriesByUser() }
+        onClick={() => searchRepositoriesByUser() }
       >
           Pesquisar Repostorios
       </button>

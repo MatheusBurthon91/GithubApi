@@ -17,9 +17,12 @@ export default function ScreenUserData() {
           <div>
             <img src={user.avatar_url} alt={user.login} />
           </div>
-          <a href={user.html_url} target="_blank" rel="noreferrer">
-            Link do perfil
-          </a>
+            <h3>
+              Acesse o perfil da pessoa:
+              <a href={user.html_url} target="_blank" rel="noreferrer" id="profile">
+              Link do perfil
+              </a>  
+            </h3>
         </div>
         )}
     </section>
