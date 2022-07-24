@@ -3,14 +3,14 @@ import GlobalContext from './GlobalContext';
 import { useState } from 'react';
 
 export default function Provider({ children }) {
-  const [input, setInput] = useState('');
+  const [searchInput, setSearchInput] = useState('');
   const [accessButton, setAccessButton] = useState(true);
   const [repositories, setRepositories] = useState([]);
   const [user, setUser] = useState({});
 
   const values = {
-    input,
-    setInput,
+    searchInput,
+    setSearchInput,
     accessButton,
     setAccessButton,
     repositories,

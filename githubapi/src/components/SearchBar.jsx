@@ -4,8 +4,8 @@ import GlobalContext from "../helpers/GlobalContext";
 
 export default function SearchBar() {
   const {
-    input,
-    setInput,
+    searchInput,
+    setSearchInput,
     accessButton,
     setAccessButton,
     setRepositories,
@@ -13,7 +13,7 @@ export default function SearchBar() {
   } = useContext(GlobalContext);
 
   const searchRepositoriesByUser = async () => {
-    const url = `https://api.github.com/users/${input}/repos`;
+    const url = `https://api.github.com/users/${searchInput}/repos`;
     const request = await fetch(url);
     const response = await request.json();
     setRepositories(response);
@@ -21,20 +21,16 @@ export default function SearchBar() {
   }
 
   const validateButton = () => {
-    if (input.length === 0) {
+    if (searchInput.length === 0) {
       setAccessButton(true);
     } else {
       setAccessButton(false);
     }
   }
 
-/*   useEffect(() => {
-    searchRepositoriesByUser();
-  }, [input]) */
-
   useEffect(() => {
     validateButton();
-  }, [input, accessButton]);
+  }, [searchInput, accessButton]);
 
   return (
     <section>
@@ -42,7 +38,7 @@ export default function SearchBar() {
         Usuário:
         <input
           type="text"
-          onChange={({ target }) => setInput(target.value)}
+          onChange={({ target }) => setSearchInput(target.value)}
           placeholder="Digite o usário"
         />
       </label>

@@ -10,7 +10,6 @@ export default function App() {
     <main>
       <SearchBar />
       <ScreenUserData />
-      <h1>Teste de api do github</h1>
       <ScreenRepositories />
     </main>
   );

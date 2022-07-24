@@ -8,21 +8,14 @@ export default function ScreenUserData() {
 
   return (
     <section>
-      {console.log(user)}
       {
-        user == {} ? 
-        (<p>Sem usuário, pesquise por um no input acima.</p>) :
+        Object.keys(user).length === 0 ? (<p>Sem usuário, pesquise por um no input acima.</p>) :
         (<div>
           <h3>{user.login}</h3>
-          <div>
             <img src={user.avatar_url} alt={user.login} />
-          </div>
-            <h3>
-              Acesse o perfil da pessoa:
-              <a href={user.html_url} target="_blank" rel="noreferrer" id="profile">
+            <a href={user.html_url} target="_blank" rel="noreferrer" id="profile">
               Link do perfil
-              </a>  
-            </h3>
+            </a>
         </div>
         )}
     </section>
