@@ -4,11 +4,12 @@ import GlobalContext from "../helpers/GlobalContext";
 
 export default function SearchBar() {
   const {
-    input, 
-    setInput, 
-    accessButton, 
+    input,
+    setInput,
+    accessButton,
     setAccessButton,
     setRepositories,
+    setUser,
   } = useContext(GlobalContext);
 
   const searchRepositoriesByUser = async () => {
@@ -16,6 +17,7 @@ export default function SearchBar() {
     const request = await fetch(url);
     const response = await request.json();
     setRepositories(response);
+    setUser(response[0].owner);
   }
 
   const validateButton = () => {

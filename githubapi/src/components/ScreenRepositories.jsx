@@ -12,6 +12,7 @@ export default function ScreenRepositories() {
         Sem repositorios nessa seção pesquisa no input acima
       </h1>) : (
         <div>
+          {console.log(repositories)}
           {repositories.map((repository) => (
             <div key={repository.id}>
               <h3>{repository.name}</h3>

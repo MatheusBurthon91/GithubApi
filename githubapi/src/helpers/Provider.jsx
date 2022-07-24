@@ -6,6 +6,7 @@ export default function Provider({ children }) {
   const [input, setInput] = useState('');
   const [accessButton, setAccessButton] = useState(true);
   const [repositories, setRepositories] = useState([]);
+  const [user, setUser] = useState(null);
 
   const values = {
     input,
@@ -14,6 +15,8 @@ export default function Provider({ children }) {
     setAccessButton,
     repositories,
     setRepositories,
+    user,
+    setUser,
   }
 
   return (
