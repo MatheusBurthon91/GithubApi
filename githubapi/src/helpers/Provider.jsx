@@ -4,13 +4,16 @@ import { useState } from 'react';
 
 export default function Provider({ children }) {
   const [input, setInput] = useState('');
-  const [accessButton, setAccessButton] = useState(true); 
+  const [accessButton, setAccessButton] = useState(true);
+  const [repositories, setRepositories] = useState([]);
 
   const values = {
     input,
     setInput,
     accessButton,
     setAccessButton,
+    repositories,
+    setRepositories,
   }
 
   return (

@@ -7,8 +7,16 @@ export default function SearchBar() {
     input, 
     setInput, 
     accessButton, 
-    setAccessButton
+    setAccessButton,
+    setRepositories,
   } = useContext(GlobalContext);
+
+  const searchRepositoriesByUser = async () => {
+    const url = `https://api.github.com/users/${input}/repos`;
+    const request = await fetch(url);
+    const response = await request.json();
+    setRepositories(response);
+  }
 
   const validateButton = () => {
     if (input.length === 0) {
@@ -34,7 +42,9 @@ export default function SearchBar() {
       </label>
       <button
         type="button"
-        disabled={ accessButton }>
+        disabled={ accessButton }
+        onClick={ () => searchRepositoriesByUser() }
+      >
           Pesquisar Repostorios
       </button>
     </section>
