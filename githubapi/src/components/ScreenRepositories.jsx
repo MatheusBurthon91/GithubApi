@@ -7,6 +7,7 @@ export default function ScreenRepositories() {
 
   return (
     <section>
+      {console.log(repositories)}
       {!repositories.length ? (
       <h1>
         Sem repositorios nessa seção pesquisa no input acima
