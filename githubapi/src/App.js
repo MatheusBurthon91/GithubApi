@@ -7,9 +7,11 @@ import ScreenUserData from "./components/ScreenUserData";
 // eslint-disable-next-line import/no-unresolved
 import SearchBar from "./components/SearchBar";
 
+import "./style.css";
+
 export default function App() {
   return (
-    <main>
+    <main className="all-page">
       <Header />
       <SearchBar />
       <ScreenUserData />
