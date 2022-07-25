@@ -37,11 +37,11 @@ export default function SearchBar() {
   return (
     <section className="search-bar">
       <div>
-      <h1>
+      <h1 className="fontSize-description">
       User Finder: seu pesquisador de repositórios publicos de qualquer usuário
       </h1>
       <div className="in-search">
-      <label htmlFor="user">
+      <label htmlFor="user" className="label-search">
         Usuário:
         <input
           type="text"

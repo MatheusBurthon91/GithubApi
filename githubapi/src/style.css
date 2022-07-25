@@ -34,6 +34,7 @@ body {
   width: 90px;
   margin: 1px;
   padding: 5px;
+  font-family: Courier, monospace;
 }
 
 .search-bar {
@@ -45,8 +46,18 @@ body {
   border: 1px solid rgb(220, 220, 220);
 }
 
+.label-search {
+  font-family: Courier, monospace;
+}
+
 .in-search {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fontSize-description {
+  font-size: large;
+  font-family: Courier, monospace;
+  font-weight: bold;
 }
