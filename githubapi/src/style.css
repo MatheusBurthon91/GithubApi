@@ -52,12 +52,32 @@ body {
 
 .in-search {
   display: flex;
-  align-items: center;
   justify-content: center;
+  vertical-align: middle;
 }
 
 .fontSize-description {
   font-size: large;
   font-family: Courier, monospace;
   font-weight: bold;
+}
+
+.img-user {
+  width: 20%;
+  height: 20%;
+  border-radius: 110px;
+}
+
+.center-user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.controller-user {
+  display: table-cell;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
 }
