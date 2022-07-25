@@ -81,3 +81,12 @@ body {
   text-align: center;
   vertical-align: middle;
 }
+
+.one-repositore {
+  display: table-cell;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Courier, monospace;
+  font-weight: bold;
+}
