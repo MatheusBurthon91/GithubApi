@@ -1,3 +1,20 @@
-.all-page {
-  background-color: rgb(240, 240, 240);
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(230, 230, 230);
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(35, 35, 35);
+}
+
+.logo-git {
+  width: 15%;
+  height: 15%;
+  margin-top: 0;
+  padding-top: 0;
 }

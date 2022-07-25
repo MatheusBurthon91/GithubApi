@@ -1,10 +1,15 @@
+import "../style.css";
+
 export default function Header() {
-  return(
-  <header>
-    <img 
-      src="https://i.pinimg.com/736x/b1/5e/ed/b15eedbdafbbdbca3249e3942f4faf3b.jpg"
+  return (
+  <header className="header-center">
+    <div>
+    <img
+      className="logo-git"
+      src="https://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Github-icon.png"
       alt="github-logo" 
     />
+    </div>
   </header>
-  )
+  );
 }

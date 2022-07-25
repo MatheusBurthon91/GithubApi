@@ -34,6 +34,9 @@ export default function SearchBar() {
 
   return (
     <section>
+      <h1>
+      User Finder: seu pesquisador de repositórios publicos de qualquer usuário
+      </h1>
       <label htmlFor="user">
         Usuário:
         <input
