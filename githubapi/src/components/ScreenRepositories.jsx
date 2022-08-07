@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useHistory } from "react-router-dom";
 // eslint-disable-next-line import/no-unresolved
 import GlobalContext from "../helpers/GlobalContext";
 import "../style.css";
@@ -10,6 +11,7 @@ import "../style.css";
 
 export default function ScreenRepositories() {
   const { repositories } = useContext(GlobalContext);
+  const history = useHistory();
 
   return (
     <section className="center-user-info">
@@ -27,7 +29,12 @@ export default function ScreenRepositories() {
               !repository.description ? 'Sem descrição nesse repositório': 
                 `${repository.description}`
               }</p>
-              <button type="button">listar branches</button>
+              <button
+                type="button"
+                onClick={() => history.push(`branche/${repository.name}`)}
+              >
+                listar branches
+              </button>
             </div>
           ))}
         </div>
