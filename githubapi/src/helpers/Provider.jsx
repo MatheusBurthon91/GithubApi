@@ -7,7 +7,6 @@ export default function Provider({ children }) {
   const [accessButton, setAccessButton] = useState(true);
   const [repositories, setRepositories] = useState([]);
   const [user, setUser] = useState({});
-  const {branches, setBranches} = useState('');
 
   const values = {
     searchInput,
@@ -18,8 +17,6 @@ export default function Provider({ children }) {
     setRepositories,
     user,
     setUser,
-    branches,
-    setBranches
   }
 
   return (
