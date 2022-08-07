@@ -18,15 +18,16 @@ export default function ScreenRepositories() {
       <h1>
         Sem repositorios nessa seção pesquisa no input acima
       </h1>) : (
-        <div className="one-repositore">
+        <div className="list_repositories">
           {repositories.map((repository) => (
-            <div key={repository.id}>
+            <div key={repository.id} className="repository">
               <h3>{repository.name}</h3>
               <a href={repository.html_url}>Link do repositorio</a>
               <p>{
               !repository.description ? 'Sem descrição nesse repositório': 
                 `${repository.description}`
               }</p>
+              <button type="button">listar branches</button>
             </div>
           ))}
         </div>
