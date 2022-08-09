@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 // eslint-disable-next-line import/no-unresolved
 import GlobalContext from "../helpers/GlobalContext";
 import "../style.css";
@@ -14,12 +14,15 @@ export default function SearchBar() {
     setUser,
   } = useContext(GlobalContext);
 
+  const ref = useRef(null);
+  
   const searchRepositoriesByUser = async () => {
     const url = `https://api.github.com/users/${searchInput}/repos`;
     const request = await fetch(url);
     const response = await request.json();
     setRepositories(response);
     setUser(response[0].owner);
+    ref.current.value = '';
   }
 
   const validateButton = () => {
@@ -32,6 +35,7 @@ export default function SearchBar() {
 
   useEffect(() => {
     validateButton();
+    // eslint-disable-next-line
   }, [searchInput, accessButton]);
 
   return (
@@ -48,6 +52,7 @@ export default function SearchBar() {
           onChange={({ target }) => setSearchInput(target.value)}
           placeholder="Digite o usuário"
           className="input-search"
+          ref={ref}
         />
       </label>
       <button

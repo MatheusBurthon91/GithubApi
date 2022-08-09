@@ -15,6 +15,13 @@ export default function ListBranches({match: { params: { name } }}) {
     setBranches(response);
   }
 
+  // se apresentar no readme do projeto
+  // falar das tecnologias usadas
+  // apresentar o projeto, falar sobre a aplicação
+  // fazer testes e melhorar o css
+  // pinar o projeto
+  // subir no Gh pages
+
   useEffect(() => {
     listAllBranches();
   // eslint-disable-next-line react-hooks/exhaustive-deps
