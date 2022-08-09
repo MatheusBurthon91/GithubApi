@@ -8,8 +8,8 @@ Essa aplicação lista os repositorios publicos do github de qualquer pessoa usu
 
 # Metas:
 
-- [ ] Se apresentar no readme do projeto
-- [ ] Falar sobre o que vai ser o projeto, o que vai ser a aplicação
+- [x] Se apresentar no readme do projeto
+- [x] Falar sobre o que vai ser o projeto, o que vai ser a aplicação
 - [ ] Melhorar o css, incluindo deixar com design responsivo
 - [ ] Fazer testes
 - [ ] Citar as tecnologias que foram usadas no projeto
