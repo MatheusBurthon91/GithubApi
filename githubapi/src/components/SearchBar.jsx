@@ -15,15 +15,6 @@ export default function SearchBar() {
   } = useContext(GlobalContext);
 
   const ref = useRef(null);
-  
-  const searchRepositoriesByUser = async () => {
-    const url = `https://api.github.com/users/${searchInput}/repos`;
-    const request = await fetch(url);
-    const response = await request.json();
-    setRepositories(response);
-    setUser(response[0].owner);
-    ref.current.value = '';
-  }
 
   const validateButton = () => {
     if (searchInput.length === 0) {
@@ -31,6 +22,16 @@ export default function SearchBar() {
     } else {
       setAccessButton(false);
     }
+  }
+
+  const searchRepositoriesByUser = async () => {
+    const url = `https://api.github.com/users/${searchInput}/repos`;
+    const request = await fetch(url);
+    const response = await request.json();
+    setRepositories(response);
+    setUser(response[0].owner);
+    ref.current.value = '';
+    setSearchInput('');
   }
 
   useEffect(() => {
