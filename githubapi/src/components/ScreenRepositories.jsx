@@ -4,9 +4,8 @@ import { useHistory } from "react-router-dom";
 import GlobalContext from "../helpers/GlobalContext";
 import "../style.css";
 
-// a pesquisa de branches vai acontecer pela url:
-// https://api.github.com/repos/MatheusBurthon91/Exercicio_logica_python/branches
-// tirando o nome que fica entre o usuario e branches
+// para listar os commits use a url de exemplo abaixo
+// https://api.github.com/repos/viieirathi/blogs-api/commits
 
 
 export default function ScreenRepositories() {
